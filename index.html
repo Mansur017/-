@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Новости</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Главные Новости</h1>
+    <div id="big-news" class="big-news">
+      <p>Роберто Манчини возглавил саудовскую сборную по футболу</p>
+    </div>
+    <div class="small-news-container">
+      <div id="small-news-1" class="small-news small-news-1">
+        <p>Глава ЧВК «Вагнер» Евгений Пригожин погиб в авиакатастрофе</p>
+      </div>
+      <div id="small-news-2" class="small-news small-news-2">
+        <p>Роберто Манчини возглавил саудовскую сборную по футболу</p>
+      </div>
+      <div id="small-news-3" class="small-news small-news-3">
+        <p>В Турции оценили влияние поставок F-16 на ход спецоперации</p>
+      </div>
+    </div>
+
+    <script>
+      let news1 = document.getElementById("small-news-1");
+      let news2 = document.getElementById("small-news-2");
+      let news3 = document.getElementById("small-news-3");
+      let bigNews = document.getElementById("big-news");
+
+      news1.onclick = active;
+      news2.onclick = active;
+      news3.onclick = active;
+
+      news1.addEventListener("click", changeNews);
+      news2.addEventListener("click", changeNews);
+      news3.addEventListener("click", changeNews);
+
+      function active() {
+        [news1, news2, news3].forEach(function (news) {
+          news.classList.remove("active");
+        });
+        this.classList.toggle("active");
+      }
+
+      function changeNews() {
+        let text = this.firstElementChild.innerText;
+        let computedStyle = getComputedStyle(this);
+        let image = computedStyle.backgroundImage;
+
+        bigNews.firstElementChild.innerText = text;
+        bigNews.style.backgroundImage = image;
+      }
+    </script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

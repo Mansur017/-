@@ -1,0 +1,60 @@
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 40px;
+  font-style: italic;
+  color: rgb(0, 0, 0);
+  margin-bottom: 30px;
+}
+
+.big-news {
+  background-color: #f0f0f0;
+  padding: 170px;
+  margin-bottom: 40px;
+  background-image: url(https://imagedelivery.net/4_JwVYxosZqzJ7gIDJgTLA/69339a53-5add-4d3e-55a5-4e4c7d8d0c00/16x9);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+
+  p {
+    font-size: 60px;
+    font-weight: 700;
+    margin-top: 100px;
+  }
+}
+
+.small-news-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.small-news {
+  background-color: #f5f5f5;
+  flex-basis: 27%;
+  padding: 70px 30px;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  font-weight: 700;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  cursor: pointer;
+}
+.small-news-1 {
+  background-image: url(https://static.dw.com/image/63129038_605.jpg);
+}
+.small-news-2 {
+  background-image: url(https://imagedelivery.net/4_JwVYxosZqzJ7gIDJgTLA/69339a53-5add-4d3e-55a5-4e4c7d8d0c00/16x9);
+}
+.small-news-3 {
+  background-image: url(https://w.forfun.com/fetch/6b/6be2af1a1b95627be7cef45358d797c6.jpeg?w=1470&r=0.5625);
+}
+.active {
+  border-bottom: 15px solid rgb(0, 221, 255);
+}
